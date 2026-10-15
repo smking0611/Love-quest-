@@ -52,10 +52,10 @@ jobs:
               raise SystemExit("Missing or duplicated HTML root structure")
           if source.lower().count("<script") != source.lower().count("</script>"):
               raise SystemExit("Unbalanced script tags")
-          scripts = re.findall(r"<script\\b[^>]*>(.*?)</script\\s*>", source, re.I | re.S)
+          scripts = re.findall(r"<script\b[^>]*>(.*?)</script\s*>", source, re.I | re.S)
           if not scripts:
               raise SystemExit("No inline JavaScript found")
-          Path("/tmp/inline-script.js").write_text("\\n".join(scripts), encoding="utf-8")
+          Path("/tmp/inline-script.js").write_text("\n".join(scripts), encoding="utf-8")
           print(f"HTML parsed; {len(parser.ids)} IDs found; inline script extracted.")
           PY
 
