@@ -19,3 +19,10 @@ Dans le dépôt, ouvrir **Settings → Pages**, choisir **Deploy from a branch**
 - Tester le jeu sur téléphone.
 
 Cette version est une première base fonctionnelle, pas encore la version finale. Les photos et vidéos personnelles ne sont pas incluses.
+
+## Organisation du jeu
+- `index.html` contient les écrans et leur structure.
+- `styles.css` contient les styles et les adaptations visuelles.
+- `game.js` contient la progression, les questions, les récompenses et le mode test.
+
+À la porte d’entrée, la date peut être saisie avec ou sans séparateur (par exemple `25/08` ou `2508`).
